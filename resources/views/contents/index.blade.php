@@ -49,7 +49,7 @@
         repudiandae cum, eius repellat architecto et delectus suscipit sunt porro
         necessitatibus minus aspernatur impedit vero in debitis quisquam odio a.
     </p>
-    <a href="/posts/bandersnatch_001">
+    <a href="/posts/bandersnatch">
         Leia mais...
     </a>
     </section>

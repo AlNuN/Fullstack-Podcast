@@ -15,6 +15,4 @@ Route::get('/', 'PagesController@index');
 Route::get('sobre', 'PagesController@sobre');
 Route::get('contato', 'PagesController@contato');
 
-Route::prefix('posts')->group(function () {
-    Route::get('bandersnatch_001', 'PostsController@Bandersnatch_001');
-});
+Route::get('posts/{post}', "PostsController@genericPost");
