@@ -23,7 +23,8 @@
   <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/main.css') }}">
 
   <!-- Podcast Player -->
-  <script src=https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.5.1-1/webcomponents.min.js></script>
+  <!-- This version of webcomponents don't conflict with jquery -->
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.24/webcomponents-lite.min.js></script>
   <link rel="import" href="{{ URL::asset('podcast-player.html') }}"/>
 
   <title>FelizCast @yield('title')</title>

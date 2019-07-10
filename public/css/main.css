@@ -123,53 +123,72 @@ footer .navbar-nav .nav-item a {
 ----------------------------*/
 /* Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
+
     span#logo1, span#logo2{
         font-size: 2em;
     }
     button.navbar-toggler {
         margin-right: 5px;
     }
+
     a.navbar-brand.d-flex.align-items-center{
         padding-left: 5px;
     }
+
+    .button-rewind, .button-mute {
+        display: none;
+    }
+
 }
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) and (max-width: 767.98px) {
+
     button.navbar-toggler {
         margin-right: 40px;
     }
+
     a.navbar-brand.d-flex.align-items-center{
         padding-left: 40px;
     }
+
 }
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) and (max-width: 991.98px) {
+
     .navbar-dark .navbar-nav{
         margin-right: 20px;
     }
+
     a.navbar-brand.d-flex.align-items-center{
         padding-left: 20px;
     }
+
 }
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
+
     .navbar-dark .navbar-nav{
         margin-right: 40px;
     }
+
     a.navbar-brand.d-flex.align-items-center{
         padding-left: 40px;
     }
+
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {
+
     .navbar-dark .navbar-nav{
         margin-right: 60px;
     }
+
     a.navbar-brand.d-flex.align-items-center{
         padding-left: 60px;
     }
+
 }

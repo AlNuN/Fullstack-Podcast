@@ -12,7 +12,7 @@
     <h4 class="card-title">
     #{{ $postData->id }} {{ $postData->title }}
     </h4>
-    <podcast-player id="player" src='{{ URL::asset("mp3/$postData->name.mp3") }}'></podcast-player>
+    <podcast-player src='{{ URL::asset("mp3/$postData->name.mp3") }}'></podcast-player>
 
     <a style="margin-bottom=1.5em;" href='{{ URL::asset("zip/$postData->name.zip") }}'>Download.zip</a>
 

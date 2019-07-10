@@ -23,35 +23,8 @@
 
 @endforeach
 
-<ul class="pagination justify-content-center">
-    <li class="page-item">
-    <a class="page-link" href="">
-        <span>&laquo;</span>
-        <span class="sr-only">Voltar</span>
-    </a>
-    </li>
-    <li class="page-item active">
-    <a class="page-link" href="">
-        <span>1</span>
-    </a>
-    </li>
-    <li class="page-item">
-    <a class="page-link" href="">
-        <span>2</span>
-    </a>
-    </li>
-    <li class="page-item">
-    <a class="page-link" href="">
-        <span>3</span>
-    </a>
-    </li>
-    <li class="page-item">
-    <a class="page-link" href="">
-        <span>&raquo;</span>
-        <span class="sr-only">Avançar</span>
-    </a>
-    </a>
-    </li>
-</ul>
+<div class="d-flex justify-content-center">
+{{ $allPosts->links() }}
+</div>
 
 @endsection
