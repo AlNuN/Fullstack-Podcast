@@ -4,56 +4,24 @@
 
 @section('content')
 
-<article class="card mb-3">
-    <section class="card-body">
-    <img class="card-img-top mb-2" src="./img/diamantina.jpg" alt="">
-    <h4 class="card-title">
-    Destinos de Minas #001 - Diamantina
-    </h4>
-    <p class="card-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis
-        repudiandae cum, eius repellat architecto et delectus suscipit sunt porro
-        necessitatibus minus aspernatur impedit vero in debitis quisquam odio a.
-    </p>
-    <a href="#">
-        Leia mais...
-    </a>
-    </section>
-</article><!-- /card-->
+@foreach($allPosts as $postData)  <!-- Load all posts from posts db -->
 
 <article class="card mb-3">
     <section class="card-body">
-    <img class="card-img-top mb-2" src="img/Neon-Genesis-Evangelion.jpg" alt="">
+    <img class="card-img-top mb-2" src=' {{ URL::asset("img/$postData->name.jpg") }} ' alt="">
     <h4 class="card-title">
-    #002 Neon Genesis Evangelion - Ninguém me entende!
+    #{{ $postData->id }} {{ $postData->title }}
     </h4>
     <p class="card-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis
-        repudiandae cum, eius repellat architecto et delectus suscipit sunt porro
-        necessitatibus minus aspernatur impedit vero in debitis quisquam odio a.
+    {{ $postData->description }}
     </p>
-    <a href="#">
+    <a href='{{ URL::asset("/posts/$postData->name") }}'>
         Leia mais...
     </a>
     </section>
-</article><!-- /card-->
+</article>
 
-<article class="card mb-3">
-    <section class="card-body">
-    <img class="card-img-top mb-2" src="img/bandersnatch1.png" alt="">
-    <h4 class="card-title">
-    #001 Bandersnatch - Quem está no controle?
-    </h4>
-    <p class="card-text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis
-        repudiandae cum, eius repellat architecto et delectus suscipit sunt porro
-        necessitatibus minus aspernatur impedit vero in debitis quisquam odio a.
-    </p>
-    <a href="/posts/bandersnatch">
-        Leia mais...
-    </a>
-    </section>
-</article><!-- /card-->
+@endforeach
 
 <ul class="pagination justify-content-center">
     <li class="page-item">

@@ -1,4 +1,4 @@
-/* Geral
+/* General
 ----------------------------------------------*/
 body{
     background: #000 url(../img/bg.png);
@@ -14,7 +14,7 @@ h5 {
     color: #2e2933;
 }
 
-/* Cabeçalho
+/* Header
 ----------------------------------------------*/
 header.row{
     border-radius: 0 0 10px 10px;
@@ -51,7 +51,7 @@ span#logo2{
     color: #233237;
 }
 
-/* Busca
+/* Search
 ----------------------------------------------*/
 #busca{
     padding: 10px 0;
@@ -85,14 +85,24 @@ span#logo2{
     color: #4B4B4A;
 }
 
-/* Paginação
+/* Post
+----------------------------------------------*/
+.podcast-player{
+    border: black solid 1px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 1.5em;
+}
+
+
+/* Pagination
 ----------------------------------------------*/
 .page-item.active .page-link{
     background-color: #5880bb;
     border-color: #5880bb;
 }
 
-/* Rodapé
+/* Footer
 ----------------------------------------------*/
 footer{
     height: 100px;

@@ -9,7 +9,8 @@ class PagesController extends Controller
     // Controls the actions on loading main navigation pages
 
     public function index () {
-        return view('contents/index');
+        $allPosts = \App\Post::select('*')->orderBy('id', 'desc')->get();
+        return view('contents/index', compact('allPosts'));
     }
 
     public function sobre (){

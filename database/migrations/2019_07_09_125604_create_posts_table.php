@@ -16,12 +16,11 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->string('title', 150);
-            $table->string('subtitle', 150);
-            $table->string('photo', 250);
-            $table->string('mp3', 250);
-            $table->string('zip', 250);
-            $table->text('article_body');
+            $table->string('title', 250);
+            $table->string('name');  // the name will be the name of the files too
+            $table->text('description');
+            $table->text('content');
+            $table->unique('name');  // the row name only accepts unique names
         });
     }
 
