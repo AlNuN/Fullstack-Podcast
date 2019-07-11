@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -9,7 +10,7 @@ class PagesController extends Controller
     // Controls the actions on loading main navigation pages
 
     public function index () {
-        $allPosts = \App\Post::select('*')
+        $allPosts = Post::select('*')
             ->where('isPublished', true)
             ->orderBy('id', 'desc')
             ->paginate(3);
@@ -22,6 +23,19 @@ class PagesController extends Controller
 
     public function contato (){
         return view('contents/contato');
+    }
+
+    public function search () {
+
+        $search = $_GET["searchTerms"];
+
+        $allPosts = Post::search("$search")->where('isPublished', true)->paginate(3);
+
+        if ($allPosts->isEmpty())  // this is a paginator method from laravel API
+            return view('contents/searchFail');
+        else 
+            return view('contents/index', compact('allPosts'));
+
     }
 
 }

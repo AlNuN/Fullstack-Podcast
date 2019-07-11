@@ -14,5 +14,6 @@
 Route::get('/', 'PagesController@index');
 Route::get('sobre', 'PagesController@sobre');
 Route::get('contato', 'PagesController@contato');
+Route::get('search', 'PagesController@search');
 
-Route::get('posts/{post}', "PostsController@genericPost");
+Route::get('posts/{post}', 'PostsController@genericPost');

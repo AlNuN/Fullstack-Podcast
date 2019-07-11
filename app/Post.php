@@ -2,9 +2,16 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Laravel\Scout\Searchable;
+use Illuminate\Database\Eloquent\Model;  // Allow to use Elloquent for querying
 
 class Post extends Model
 {
-    // Allow to use Database\Eloquent\Models for querying our post table created at database/migrations
+    // 
+    use Searchable;
+
+    public function shouldBeSearchable() {
+        return $this->where('isPublished', true);
+    }
+
 }

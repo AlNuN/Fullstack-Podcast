@@ -3,7 +3,7 @@
 @section('title', '- Contato')
 
 @section('content')
-<article class="card mb-3">
+<article id="contato" class="card mb-3">
     <section class="card-body">
     <h4 class="card-title display-4">Contato:</h4>
     <p class="card-text">
@@ -17,6 +17,6 @@
         
     </p>
     </section>
-</article><!-- /card-->
+</article>
 
 @endsection

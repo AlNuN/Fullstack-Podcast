@@ -64,11 +64,11 @@
     <section id="busca" class="row mb-2 mt-2">
       <div class="col-md-12">
 
-        <div class="input-group">
-          <input class="form-control" type="text" placeholder="Pesquisar">
+        <form action="/search" class="input-group">
+          <input class="form-control" type="search" placeholder="Pesquisar" name="searchTerms">
           <div class="input-group-append">
-            <button type="button" class="btn btn-warning">Pesquisar</button>
-          </div>
+            <button type="submit" class="btn btn-warning">Pesquisar</button>
+        </form>
         </div>
 
       </div>
