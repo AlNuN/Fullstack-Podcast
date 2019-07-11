@@ -33,6 +33,7 @@ class PostsTableSeeder extends Seeder
                     repudiandae cum, eius repellat architecto et delectus suscipit sunt porro
                     necessitatibus minus aspernatur impedit vero in debitis quisquam odio a.
         ";
+        $post->isPublished = true;
         $post->save();
 
         $post = new Post;
@@ -54,6 +55,7 @@ class PostsTableSeeder extends Seeder
                     repudiandae cum, eius repellat architecto et delectus suscipit sunt porro
                     necessitatibus minus aspernatur impedit vero in debitis quisquam odio a.
         ";
+        $post->isPublished = true;
         $post->save();
 
         $post = new Post;
@@ -75,7 +77,29 @@ class PostsTableSeeder extends Seeder
                     repudiandae cum, eius repellat architecto et delectus suscipit sunt porro
                     necessitatibus minus aspernatur impedit vero in debitis quisquam odio a.
         ";
+        $post->isPublished = true;
         $post->save();
 
+        $post = new Post;
+        $post->title = 'Pseudociências - A ignorância é uma virtude?';
+        $post->name = 'pseudociências';
+        $post->description = "
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis
+                    repudiandae cum, eius repellat architecto et delectus suscipit sunt porro
+                    necessitatibus minus aspernatur impedit vero in debitis quisquam odio a.
+        ";
+        $post->content = "
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis
+                    repudiandae cum, eius repellat architecto et delectus suscipit sunt porro
+                    necessitatibus minus aspernatur impedit vero in debitis quisquam odio a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis
+                    repudiandae cum, eius repellat architecto et delectus suscipit sunt porro
+                    necessitatibus minus aspernatur impedit vero in debitis quisquam odio a.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis
+                    repudiandae cum, eius repellat architecto et delectus suscipit sunt porro
+                    necessitatibus minus aspernatur impedit vero in debitis quisquam odio a.
+        ";
+        $post->isPublished = false;
+        $post->save();
     }
 }

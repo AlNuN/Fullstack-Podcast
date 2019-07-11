@@ -12,7 +12,10 @@ class PostsController extends Controller
 
     public function genericPost($post){
 
-        $postData = Post::where('name', "$post")->first();  // find the database by its name
+        $postData = Post::where([
+            ['name', '=', "$post"],
+            ['isPublished', '=', true]
+            ])->first();  // find the database by its name
 
         return view('posts/post', compact('postData'));  // insert it on the model
 

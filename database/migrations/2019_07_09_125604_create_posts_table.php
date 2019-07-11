@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('name');  // the name will be the name of the files too
             $table->text('description');
             $table->text('content');
+            $table->boolean('isPublished');  // determine if it is published
             $table->unique('name');  // the row name only accepts unique names
         });
     }
