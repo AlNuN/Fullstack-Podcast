@@ -3,6 +3,7 @@
 body{
     background: #000 url(../img/bg.png);
     color: #4B4B4A;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 h4 {
@@ -16,6 +17,10 @@ h5 {
 
 /* Header
 ----------------------------------------------*/
+header{
+    background-color: #ffc107;
+}
+
 header.row{
     border-radius: 0 0 10px 10px;
 }
@@ -25,15 +30,14 @@ header.row{
     border-color: white;
 } 
 
-
 .navbar-dark .navbar-nav .nav-link{
-    color: white;
+    color: #fdfffc;
     font-weight: 700;
-    font-size: 1.2em;
+    font-size: 1.3em;
     margin: 0 5px;
 }
 .navbar-dark .navbar-nav .nav-link:hover{
-    color: #4B4B4A;
+    color: #6e5e2e;
 }
 
 span#logo1, span#logo2{
@@ -43,7 +47,7 @@ span#logo1, span#logo2{
 }
 
 span#logo1{
-    margin-left: 10px;
+    margin-left: 0px;
     color: #18121e;
 }
 
@@ -59,29 +63,21 @@ span#logo2{
 
 /* Cards 
 ----------------------------------------------*/
-#corpo .card{
+main .card, aside .card{
     border-color: #adaa6b;
     background: #e9e7d0;
 }
 
-#corpo a{
+main a, aside a{
     color: #4B4B4A;
+    font-weight: 700;
 }
 
-#coluna .card{
-    border-color: #233237;
-    background: #c7caa1;
-}
-
-#coluna a{
-    color: #4B4B4A;
-}
-
-#coluna a:hover{
+main a:hover, aside a:hover{
     color: grey;
 }
 
-#coluna p{
+aside p{
     color: #4B4B4A;
 }
 
@@ -193,7 +189,7 @@ footer .navbar-nav .nav-item a {
 @media (min-width: 1200px) {
 
     .navbar-dark .navbar-nav{
-        margin-right: 60px;
+        margin-right: 120px;
     }
 
     a.navbar-brand.d-flex.align-items-center{

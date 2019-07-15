@@ -1,0 +1,143 @@
+:root{
+    --icon-dimensions: 5em;
+    --body-width: 53.32%;
+    --body-height: 71.66%;
+    --body-top: 5.21%;
+    --body-left: 23.34%;
+    --body-face-const: 0.91;
+    --face-width: calc(var(--body-width) * var(--body-face-const));
+    --face-height: calc(var(--body-height) * var(--body-face-const));
+    --lines-color: black;
+}
+
+#icon{
+    position: relative;
+    width: var(--icon-dimensions);
+    height: var(--icon-dimensions);
+    text-align: left;
+    background-color: transparent;
+}
+
+#body{
+    position: absolute;
+    width: var(--body-width);
+    height: var(--body-height);
+    border-radius: 50%;
+    background-color: var(--lines-color);
+    top: var(--body-top);
+    left: var(--body-left);
+    box-shadow: calc(var(--icon-dimensions) * .0054) calc(var(--icon-dimensions) * .0054) calc(var(--icon-dimensions) * .013) black;
+}
+
+#face{
+    position: absolute;
+    width: var(--face-width);
+    height: var(--face-height);
+    border-radius: 50%;
+    background-color: #ffc107;
+    top: calc(((var(--body-height) - var(--face-height)) / 2) + var(--body-top));
+    left: calc(((var(--body-width) - var(--face-width)) / 2) + var(--body-left));
+}
+
+.eye{
+    position: absolute;
+    width: 8%;
+    height: 20%;
+    border-radius: 20%;
+    background-color: var(--lines-color);
+    box-shadow: calc(var(--icon-dimensions) * .0054) calc(var(--icon-dimensions) * .0054) calc(var(--icon-dimensions) * .013) black;
+}
+
+.eye.left{
+    top: 20%;
+    left: 37%;
+}
+
+.eye.right{
+    top: 20%;
+    left: 55%;
+}
+
+#mouth{
+    position: absolute;
+    width: 30%;
+    height: 15%;
+    background-color: var(--lines-color);
+    border-bottom-left-radius: calc(var(--icon-dimensions) * 0.15);
+    border-bottom-right-radius: calc(var(--icon-dimensions) * 0.15);
+    top: 53%;
+    left: 35%;
+    box-shadow: calc(var(--icon-dimensions) * .0054) calc(var(--icon-dimensions) * .0054) calc(var(--icon-dimensions) * .013) black;
+}
+
+.strip{
+    position: absolute;
+    width: 8%;
+    height: 5%;
+    border-radius: 20%;
+    background-color: var(--lines-color);
+    box-shadow: calc(var(--icon-dimensions) * .0054) calc(var(--icon-dimensions) * .0054) calc(var(--icon-dimensions) * .013) black;
+}
+
+.strip.left-1{
+    top: 33%;
+    left: 22%;
+}
+.strip.left-2{
+    top: 40%;
+    left: 22%;
+}
+
+.strip.left-3{
+    top: 47%;
+    left: 22%;
+}
+
+.strip.right-1{
+    top: 33%;
+    left: 70%;
+}
+
+.strip.right-2{
+    top: 40%;
+    left: 70%;
+}
+
+.strip.right-3{
+    top: 47%;
+    left: 70%;
+}
+
+#handle{
+    position: absolute;
+    width: 8%;
+    height: 15%;
+    border-radius: 20%;
+    background-color: var(--lines-color);
+    top: 76%;
+    left: 45.5%;
+    box-shadow: calc(var(--icon-dimensions) * .0054) calc(var(--icon-dimensions) * .0054) calc(var(--icon-dimensions) * .013) black;
+}
+
+#base{
+    position: absolute;
+    width: 30%;
+    height: 5%;
+    border-radius: 20%;
+    background-color: var(--lines-color);
+    top: 90%;
+    left: 34.5%;
+    box-shadow: calc(var(--icon-dimensions) * .0054) calc(var(--icon-dimensions) * .0054) calc(var(--icon-dimensions) * .013) black;
+}
+
+@media (max-width: 575.98px) {
+    :root{
+    --icon-dimensions: 3em;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    :root{
+    --icon-dimensions: 4em;
+    }
+}

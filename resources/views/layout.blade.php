@@ -22,6 +22,9 @@
   <!-- Estilo customizado -->
   <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/main.css') }}">
 
+  <!-- Ícone css -->
+  <link rel="stylesheet" type="text/css" href="{{ URL::asset('css/icon.css') }}">
+
   <!-- Podcast Player -->
   <!-- This version of webcomponents don't conflict with jquery -->
   <script src=https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.24/webcomponents-lite.min.js></script>
@@ -35,12 +38,29 @@
 
   <div class="container">
 
-    <header class="row bg-warning">
+    <header class="row">
       <div class="col-md-12">
         <nav class="navbar navbar-expand-md navbar-dark">
 
-          <a href="/" class="navbar-brand d-flex align-items-center">
-            <img class="d-none d-sm-block" src="{{ URL::asset('img/logo-meu.png') }}" width="80" alt="FelizCast">
+            <a href="/" class="navbar-brand d-flex align-items-center">
+
+            <span id="icon"  alt="FelizCast">
+                <span id="shadow"></span>
+                <span id="body"></span>
+                <span id="face"></span>
+                <span class="eye left"></span>
+                <span class="eye right"></span>
+                <span id="mouth"></span>
+                <span class="strip right-1"></span>
+                <span class="strip right-2"></span>
+                <span class="strip right-3"></span>
+                <span class="strip left-1"></span>
+                <span class="strip left-2"></span>
+                <span class="strip left-3"></span>
+                <span id="handle"></span>
+                <span id="base"></span>
+            </span>
+
             <span id="logo1">Feliz</span><span id="logo2">Cast</span>
           </a>
 
@@ -75,9 +95,9 @@
     </section>
 
     <section class="row">
-        <main class='col-md-8'>@yield('content')</main>
+        <main class='col-md-9'>@yield('content')</main>
 
-      <aside class="col-md-3 offset-md-1 d-none d-md-block" id="coluna">
+      <aside class="col-md-3  d-none d-md-block" id="coluna">
 
         <article class="card mb-3">
           <header class="card-header">
